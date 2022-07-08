@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body,html {
+            height: 100%;
+            width: 100%;
+        }
+        .text {
+            width: 700px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            font-size: 70px;
+            line-height: 70px;
+            transform: translate(-50%, -50%);
+            text-shadow: 4px 4px 1px #333;
+        }
+        .text::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(-45deg, #fff 0%, #fff 25%, transparent 25%, transparent 50%, 
+                                        #fff 50%, #fff 75%, transparent 75%, transparent 75%);
+            background-size:6px 6px;
+            z-index: 1;
+        }
+        .text::after {
+            position: absolute;
+            content: attr(data-name);
+            top: -2px;
+            left: -1px;
+            right: 6px;
+            bottom: 6px;
+            color: #333;
+            z-index: 2;
+
+            text-shadow: 3px 3px #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="text" data-name="赵翰卿&刘佳晨">赵翰卿&刘佳晨</div>
+</body>
+</html>

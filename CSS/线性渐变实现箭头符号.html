@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            display: flex;
+        }
+        .arrow{
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+        }
+        /* 左箭头 */
+        /* .arrow{
+            background: 
+                linear-gradient(-135deg, transparent 10%, #04e6fb 10%, #65ff9a 100%) top right,
+                linear-gradient(-45deg, transparent 10%, #04e6fb 10%, #65ff9a 100%) bottom right,
+                linear-gradient(-135deg, #04e6fb 0, #65ff9a 90%, transparent 90%) top left,
+                linear-gradient(-45deg, #04e6fb 0, #65ff9a 90%, transparent 90%) bottom left;
+            background-size: 90% 50%;
+            background-repeat: no-repeat;
+        } */
+        /* 右箭头 */
+        .arrow {
+            background: linear-gradient(-45deg, transparent 10%,  #65ff9a 10%, #04e6fb 100%) top right,
+                        linear-gradient(-135deg, transparent 10%, #65ff9a 10%, #04e6fb 100%) bottom right,
+                        linear-gradient(-45deg, #65ff9a 0, #04e6fb 90%, transparent 90%) top left,
+                        linear-gradient(-135deg, #65ff9a 0, #04e6fb 90%, transparent 90%) bottom left;
+            background-size: 90% 50%;
+            background-repeat: no-repeat;
+        }
+        .arrow:nth-child(n+2) {
+            transform: translateX(calc(-10px * 1));
+        }
+        .arrow:nth-child(n+3) {
+            transform: translateX(calc(-10px * 2));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="arrow">first</div>
+        <div class="arrow">second</div>
+        <div class="arrow">third</div>
+    </div>
+    
+</body>
+</html>

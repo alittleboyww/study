@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(50%, 50%);
+            background-color: antiquewhite;
+            border-radius: 8px;
+            color: #fff;
+        }
+        .underline {
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            font-size: 20px;
+            transition: 1s;
+        }
+        .underline {
+            background: linear-gradient(rgb(198, 236, 92), rgb(198, 236, 92)) no-repeat;
+            background-size: 100% 1px;
+            background-position: -10em 1.25em;
+        }
+        .underline:hover {
+            background-position: 0 1.25em;
+        }
+
+        .underline-dot {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="underline">
+            利用线性背景弄下滑线
+        </div>
+        <div class="underline-dot">
+            线性点背景弄下滑线
+        </div>
+    </div>
+</body>
+</html>

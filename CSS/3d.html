@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            /* background-color: #EAF2D3; */
+            background: linear-gradient(-20deg, #e9defa 0%,#fbfcdb 100%);
+            /* perspective: 800px;
+            perspective-origin: 250px 300px; */
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #b0929f;
+
+            transform-style: preserve-3d;
+            perspective-origin: 50% 50%;
+            perspective: 10px;
+        }
+        .three-d {
+            width: 50px;
+            height: 50px;
+            transform: rotateY(45deg);
+            background-color: #b0c4de;
+            box-shadow: 1px 1px 10px 1px #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="three-d">
+
+        </div>
+    </div>
+</body>
+</html>

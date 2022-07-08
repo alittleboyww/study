@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            position: relative;
+            background: linear-gradient(to top right, #000000 0%, #769c9b 50%, #fbfbfb);
+            transform-style: preserve-3d;
+            perspective: 800px;
+            perspective-origin: 50% 50%;
+            overflow: hidden;
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        ul {
+            position: absolute;
+            display: flex;
+            justify-items: center;
+            list-style: none;
+        }
+        li {
+            width: calc(var(--i) * 1px);
+            height: calc(var(--i) * 1px);
+
+            position: absolute;
+            bottom: 10px;
+
+            background: linear-gradient(to top right, #fefe54 0%, #a4f4f2 50%, #9e839f);
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px 2px #b0c4de;
+
+            opacity: 0.5;
+            animation: moveDown calc(var(--t) * 0.5s) ease infinite;
+        }
+        li:nth-child(5n) {
+            left: calc(var(--i) * 10px);
+            animation: moveDown calc(var(--t) * 1s) ease infinite;
+        }
+        li:nth-child(5n + 1) {
+            left: calc(var(--i) * 30px);
+            animation: moveDown calc(var(--t) * 1.5s) linear  infinite;
+        }
+        li:nth-child(5n + 2) {
+            left: calc(var(--i) * 70px);
+            animation: moveDown calc(var(--t) * 1.25s) linear  infinite;
+        }
+        li:nth-child(5n + 3) {
+            left: calc(var(--i) * 80px);
+            animation: moveDown calc(var(--t) * 1.75s) ease infinite;
+        }
+        li:nth-child(5n + 4) {
+            left: calc(var(--i) * 90px);
+            animation: moveDown calc(var(--t) * 2s) linear  infinite;
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform-style: preserve-3d;
+            animation: imgRotate 30s ease infinite;
+        }
+        .img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #6495ed;
+            /* opacity: 0.9; */
+        }
+        .img img {
+            width: 100%;
+        }
+        .img:nth-of-type(1) {
+            transform: rotateY(30deg) translateZ(250px);
+        }
+        .img:nth-of-type(2) {
+            transform: rotateY(90deg) translateZ(250px);
+        }
+        .img:nth-of-type(3) {
+            transform: rotateY(150deg) translateZ(250px);
+        }
+        .img:nth-of-type(4) {
+            transform: rotateY(210deg) translateZ(250px);
+        }
+        .img:nth-of-type(5) {
+            transform: rotateY(270deg) translateZ(250px);
+        }
+        .img:nth-of-type(6) {
+            transform: rotateY(330deg) translateZ(250px);
+        }
+        @keyframes imgRotate {
+            0% {
+                transform: translate(-50%, -50%) rotateY(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotateY(360deg);
+            }
+        }
+        @keyframes moveDown {
+            0% {
+                bottom: 20px;
+            }
+            100% {
+                bottom: -800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img"><img src="./img/img.jpg" alt=""></div>
+        <div class="img"><img src="./img/img1.jpg" alt=""></div>
+        <div class="img"><img src="./img/img2.jpg" alt=""></div>
+        <div class="img"><img src="./img/img3.jpg" alt=""></div>
+        <div class="img"><img src="./img/img4.jpg" alt=""></div>
+        <div class="img"><img src="./img/img5.jpg" alt=""></div>
+    </div>
+    <div class="bg">
+        <ul>
+            <li style="--i:10;--t:10"></li>
+            <li style="--i:12;--t:29"></li>
+            <li style="--i:18;--t:34"></li>
+            <li style="--i:17;--t:43"></li>
+            <li style="--i:13;--t:52"></li>
+            <li style="--i:6;--t:13"></li>
+            <li style="--i:18;--t:16"></li>
+            <li style="--i:17;--t:20"></li>
+            <li style="--i:12;--t:15"></li>
+            <li style="--i:23;--t:37"></li>
+            <li style="--i:15;--t:44"></li>
+            <li style="--i:11;--t:53"></li>
+            <li style="--i:12;--t:10"></li>
+            <li style="--i:10;--t:50"></li>
+            <li style="--i:12;--t:39"></li>
+            <li style="--i:18;--t:24"></li>
+            <li style="--i:17;--t:13"></li>
+            <li style="--i:13;--t:22"></li>
+            <li style="--i:10;--t:43"></li>
+            <li style="--i:21;--t:29"></li>
+            <li style="--i:22;--t:36"></li>
+            <li style="--i:15;--t:43"></li>
+            <li style="--i:17;--t:56"></li>
+            <li style="--i:10;--t:63"></li>
+            <li style="--i:4;--t:64"></li>
+            <li style="--i:13;--t:30"></li>
+            <li style="--i:12;--t:23"></li>
+            <li style="--i:10;--t:14"></li>
+            <li style="--i:15;--t:55"></li>
+            <li style="--i:11;--t:37"></li>
+            <li style="--i:15;--t:15"></li>
+            <li style="--i:23;--t:37"></li>
+            <li style="--i:12;--t:44"></li>
+            <li style="--i:11;--t:23"></li>
+            <li style="--i:22;--t:30"></li>
+        </ul>
+    </div>
+</body>
+</html>
