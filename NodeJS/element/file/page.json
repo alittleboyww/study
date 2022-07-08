@@ -1,0 +1,20 @@
+[
+    {
+        "lang": "CHN",
+        "pages": {
+            "index": {
+                "1": "内容1",
+                "2": "内容2"
+            }
+        } 
+    }, 
+    {
+        "lang": "ENG",
+        "pages": {
+            "index": {
+                "1": "content one",
+                "2": "content two"
+            }
+        }
+    }
+]

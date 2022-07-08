@@ -1,0 +1,4 @@
+{
+    "navTab": "../src/components/navTab/index.js",
+    "loading": "../src/components/loading/index.js"
+}

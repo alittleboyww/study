@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    /* 公共部分 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .home-warp1, .home-warp3, .home-warp5 {
+      background: url('./img/bg.jpg') repeat;
+    }
+    .home-warp2, .home-warp4, .home-warp6 {
+      background: url('./img/bg2.jpg') repeat;
+    }
+    .block-warp {
+      width: 1082px;
+      margin: 0 auto;
+    }
+    /* 第一个块 */
+    .home-warp1 {
+      position: relative;
+      box-shadow: 0 2px 8px 0 hsla(0, 0%, 75%, 50%);
+    }
+    .home-warp1 .shadow {
+      height: 14px;
+      box-shadow: inset 0 2px 8px 0 hsla(0, 0%, 75%, 50%);
+    }
+    .warp1 {
+      display: flex;
+      justify-content: center;
+      padding: 122px;
+    }
+    .warp1>.desc>h3{
+      color: #4c4c4c;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+    .warp1 .desc p {
+      width: 543px;
+      line-height: 1.8;
+      font-size: 21px;
+      font-weight: 400;
+      color: #4c4c4c;
+      letter-spacing: 1px;
+      padding-bottom: 66px;
+    }
+    .logo-img>img {
+      width: 200px;
+      margin-right: 133px;
+    }
+    /* 第二块 */
+    .warp2 {
+      padding-top: 90px;
+    }
+    .warp2 .title {
+      width: 333px;
+      margin: 0 auto;
+      color: #4c4c4c;
+      text-align: center;
+      font-size: 28px;
+    }
+    .warp2 .main {
+      padding-top: 160px;
+      padding-bottom: 163px;
+      display: flex;
+    }
+    .main .left, .main .right {
+      flex: 1;
+      position: relative;
+    }
+    .desc-module {
+      width: 380px;
+      max-width: 428px;
+      text-align: left;
+      color: #4c4c4c;
+      z-index: 10;
+    }
+    .desc-module .common-wrod {
+      animation: slideUp 1s ease-in-out both;
+      animation-delay: 0.3s;
+    }
+    @keyframes slideUp {
+      0%{
+        opacity: 0;
+        transform: translate3d(0,30px,0);
+      }
+      100%{
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+    .desc-module h3 {
+      position: relative;
+      margin-bottom: 25px;
+      font-weight: 500;
+      color: #4c4c4c;
+      font-size: 26px;
+      line-height: 1;
+    }
+    .desc-module h3::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: -10px;
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: #ceaf7e;
+    }
+    .desc-module h3::after {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: -24px;
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+      z-index: -1;
+      background: #ceaf7e;
+    }
+    .desc-module p {
+      text-align: justify;
+      font-size: 20px;
+      color: #4c4c4c;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    .warp2 .main .right img {
+      position: absolute;
+      width: 418px;
+    }
+
+    .warp2 .main .right img.item1 {
+      left: 0;
+      top: 0;
+      z-index: 3;
+      animation: slideRight 0.4s ease-in both;
+    }
+
+    .warp2 .main .right img.item2 {
+      left: 28%;
+      top: -100px;
+      z-index: 2;
+      animation: slideLeft 0.4s ease-in both;
+    }
+
+    .warp2 .main .right img.item3 {
+      left: 22%;
+      top: 116px;
+      z-index: 2;
+      animation: slideLeft 0.4s ease-in both;
+    }
+
+    .warp2 .main .right img.shadow {
+      bottom: -63%;
+      width: 580px;
+      height: 91px;
+      z-index: 1;
+      opacity: 0.7;
+      animation: fadeIn 0.5s ease-in both;;
+    }
+    @keyframes slideRight {
+      0% {
+        opacity: 0;
+        transform: translate3d(-30px,0,0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+    @keyframes slideLeft {
+      0% {
+        opacity: 0;
+        transform: translate3d(30px,0,0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="warp">
+    <!-- 最外层是壳子 公共统一容器-->
+    <div class="activite">
+      <!-- 第二层包装,用于自己 -->
+      <div class="home-warp home-warp1">
+        <div class="block-warp warp1">
+          <div class="logo-img">
+            <img src="./img/logo.jpg"/>
+          </div>
+          <div class="desc">
+            <h3>
+              自己的一些总结，让自己变得更优秀
+            </h3>
+            <p>
+              想做一些处理，将自己的所有内容进行记录，通过每天的积累来慢慢提升自己，仅此而已。而且现在自己的性格让自己很不满意，必须要做些许更改。
+            </p>
+          </div>
+        </div>
+        <div class="shadow">
+        </div>
+        <div class="shadow">
+        </div>
+      </div>
+    </div>
+    <div class="activite">
+      <div class="home-warp home-warp2">
+        <div class="block-warp warp2">
+          <div class="title">在这里，你将收获</div>
+          <div class="main">
+            <div class="left describe">
+              <div class="desc-module">
+                <h3 class="common-wrod">学习内容描述</h3>
+                <p class="common-wrod">
+                  包含前端、后端学习经验分享以及一些笔记总结，最大限度的体现自己的所学、所想。其中也包括对一些书籍的看法，包含的内容可能很杂，但分类力求明确。
+                  一方面便于自己查找，另一方面则当做是自己的输出加深自己的映像。
+                </p>
+              </div>
+              
+            </div>
+            <div class="right">
+              <img src="./img/test01.png" class="img item1"/>
+              <img src="./img/test02.png" class="img item2" />
+              <img src="./img/test03.png" class="img item3" />
+              <img src="./img/bottom.png" class="shadow"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="activite">
+
+    </div>
+    <div class="activite">
+
+    </div>
+    <div class="activite">
+
+    </div>
+    <div class="activite">
+
+    </div>
+  </div>
+  
+</body>
+</html>
